@@ -21,8 +21,10 @@
 
 /*4. Crear 5 botones numerados del 1 al 5. Al hacer click en uno y mostrar un mensaje que diga “Haz clickeado el botón $número”, indicando al usuario cuál botón apretó.*/
 
-//agarro el elemento con el que voy a trabajar
-// const botones = document.querySelectorAll("button");
+// agarro el elemento con el que voy a trabajar
+// const botones = document.querySelectorAll("button")
+// // document.getElementByValue(console.log(this.values))
+
 
 
 // const cuandoSeHaceClick = function(hizo){
@@ -32,7 +34,7 @@
 // botones.forEach(boton=>{
 // 	boton.addEventListener("click", function(){
 // 		cuandoSeHaceClick(this.value)
-// 	})
+	// })
 // }) // me muestra el valor del value que tengo en html, no id y no class (en este caso). en este caso al presionar el boton me desaparece xq le sobreescribo algo con document.write
 
 
@@ -64,9 +66,31 @@
 /*d) Al hacer click en el boton genera un nuevo párrafo en el html que muestra la suma de ambos*/
 
 
-/*Poner en un select tres (o más) opciones de superheroes. Dependiendo el que el usuario elija, se mostrará debajo una imagen que haga referencia al personaje. Cuando se le pase el mouse por encima, la imagen debe mostrar una foto de su identidad secreta en su lugar. (Por ejemplo en lugar de verse superman, se vera a Clark Kent).*/
+/*7)Poner en un select tres (o más) opciones de superheroes. Dependiendo el que el usuario elija, se mostrará debajo una imagen que haga referencia al personaje. Cuando se le pase el mouse por encima, la imagen debe mostrar una foto de su identidad secreta en su lugar. (Por ejemplo en lugar de verse superman, se vera a Clark Kent).*/
+let selected;
+function ShowSelected()
+{
+/* Para obtener el valor */
+// var cod = document.getElementById("nom").value;
+// console.log(cod);
+ 
+/* Para obtener el texto */
+var combo = document.getElementById("nom");
+selected = combo.options[combo.selectedIndex].text;
+console.log(selected);
 
-let i= document.querySelectorAll("select")
-let opcion= ()=> {
-	if(i.value==="bruce"){}
+photograph()
+}
+
+//con esto agrego la imagen de acuerdo al super
+
+const m= document.querySelector("img")
+
+let change= ()=>{m.src= "${selected}.jpg"}
+
+let photograph= ()=>{ 
+    if (selected=== "Superman"){m.src= "Superman.jpg";  m.addEventListener("mouseover", change)}
+    if (selected=== "Batman"){m.src= "Batman.jpg";  m.addEventListener("mouseover", change)}
+    if (selected=== "Iron Man"){m.src= "Iron Man.jpg";  m.addEventListener("mouseover", change)}
+    
 }

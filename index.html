@@ -20,22 +20,26 @@
     <button value="5">5</button> -->
 
     <!-- ejercicio 4 -->
-    <!-- <input type="text" id="entrada">
+     <!-- <input type="text" id="entrada">
     <button onclick="cambio(); colorido()" id="ingreso">OK</button>
-    <p class="mensaje"></p> -->
+    <p class="mensaje"></p>  -->
 
     <!-- ejercicio 5 -->
     <!-- <input type="text" id="cambio" class="uno">
     <input type="text" id="cambio2" class="dos"> -->
 
     <!-- ejercicio 6 -->
-    <select name="supers" id="">
+<div>
+    <select name="supers" id="nom" onchange="ShowSelected();"> 
         <option value="choice">Elegi un superheroe!</option>
-        <option onclick="" value="bruce">Batman</option>
-        <option onclick="" value="clark">Superman</option>
-        <option onclick="" value="tony">Iron Man</option>
+        <option onclick="photograph()" value="bruce">Batman</option>
+        <option onclick="photograph()" value="clark">Superman</option>
+        <option onclick="photograph()" value="tony">Iron Man</option> 
     </select>
-
+</div>
+<div>
+    <img src="" alt="">
+</div>
 
 <script src="eventos.js"></script>
 </body>
