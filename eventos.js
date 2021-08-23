@@ -59,38 +59,69 @@
 
 
 /*6. Crear dos input tipo número y un botón. */
-/*a) Al hacer foco en un input se debe poner azul.*/
 
-/*b) Al escribir, se debe poner violeta.*/
-/*c) Cuando se le saca el foco, se pone verde.*/
-/*d) Al hacer click en el boton genera un nuevo párrafo en el html que muestra la suma de ambos*/
+// /*a) Al hacer foco en un input se debe poner azul.*/
 
+// let o= document.querySelector("#escribo")
+
+// let colorido= ()=> {o.classList.add("azul")}
+
+// o.addEventListener("focus", colorido)
+
+// /*b) Al escribir, se debe poner violeta.*/
+
+// let writing= ()=>{o.classList.add("violeta")}
+
+// o.addEventListener("keydown", writing)
+
+// /*c) Cuando se le saca el foco, se pone verde.*/
+
+// let green= ()=> {o.classList.add("verde")}
+
+// o.addEventListener("blur", green)
+
+
+// /*d) Al hacer click en el boton genera un nuevo párrafo en el html que muestra la suma de ambos*/
+
+// let boton= document.querySelector("button")
+
+// let info= ()=>{console.log(o.value)}
+
+// let info2= ()=>{console.log(boton.value)} /*con esto averiguo el valor del botonnnnn!!*/
+
+// let suma= ()=> {document.write(`<p>${parseFloat(boton.value) + parseFloat(o.value)}`)}
+
+// boton.addEventListener("click", info)
+// boton.addEventListener("click", suma)
 
 /*7)Poner en un select tres (o más) opciones de superheroes. Dependiendo el que el usuario elija, se mostrará debajo una imagen que haga referencia al personaje. Cuando se le pase el mouse por encima, la imagen debe mostrar una foto de su identidad secreta en su lugar. (Por ejemplo en lugar de verse superman, se vera a Clark Kent).*/
-let selected;
-function ShowSelected()
-{
-/* Para obtener el valor */
-// var cod = document.getElementById("nom").value;
+
+// let selected; let cod;
+
+// function ShowSelected()
+// {
+ 
+// cod = document.getElementById("nom").value;   /* Para obtener el valor */
 // console.log(cod);
  
-/* Para obtener el texto */
-var combo = document.getElementById("nom");
-selected = combo.options[combo.selectedIndex].text;
-console.log(selected);
 
-photograph()
-}
+// var combo = document.getElementById("nom");   /* Para obtener el texto */
+// selected = combo.options[combo.selectedIndex].text;
+// console.log(selected);
 
-//con esto agrego la imagen de acuerdo al super
+// photograph()
 
-const m= document.querySelector("img")
+// }
 
-let change= ()=>{m.src= "${selected}.jpg"}
+// const m= document.querySelector("img")   
 
-let photograph= ()=>{ 
-    if (selected=== "Superman"){m.src= "Superman.jpg";  m.addEventListener("mouseover", change)}
-    if (selected=== "Batman"){m.src= "Batman.jpg";  m.addEventListener("mouseover", change)}
-    if (selected=== "Iron Man"){m.src= "Iron Man.jpg";  m.addEventListener("mouseover", change)}
+// let change= ()=>{m.src= `${cod}.jpg`}
+
+// let photograph= ()=>{ 
+//     if (selected===`${selected}`){
+//         m.src=`${selected}.jpg`};  
+//         m.addEventListener("mouseover", change)
+//     }
+
+//     m.addEventListener("mouseout", photograph)
     
-}
